@@ -1,0 +1,11 @@
+[default]
+TITLE = "Hot Pot"
+EXTENSIONS = [
+    # "hotpot.ext.appearance",
+    # "hotpot.ext.database",
+    # "hotpot.ext.auth",
+    "hotpot.ext.admin",
+    # "hotpot.ext.commands",
+    # "flask_bootstrap.Bootstrap",
+    "hotpot.blueprint.webui"
+]

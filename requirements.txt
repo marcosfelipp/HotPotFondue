@@ -1,0 +1,8 @@
+Flask
+dynaconf
+Flask-Bootstrap
+Flask-Admin
+flask-simplelogin
+Flask-SQLAlchemy
+SQLAlchemy-serializer
+flask_assets
