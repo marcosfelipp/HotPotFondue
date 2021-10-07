@@ -1,9 +1,10 @@
 *{
-    margin: 0px;
-    background-color: #fafafa grey lighten-5;
+    margin: 0;
+    background-color: #f3f3f3;
+    font-family: 'Rubik', sans-serif;
 }
 
-
-.sabor{
-    align-content: center;
+div{
+    background-color: #ffffff;
 }
+
