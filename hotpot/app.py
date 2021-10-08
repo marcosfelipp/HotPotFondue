@@ -1,5 +1,5 @@
-from flask import Flask, config
-from hotpot.ext import appearance, configuration
+from flask import Flask
+from hotpot.ext import configuration
 
 
 def create_app():

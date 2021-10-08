@@ -4,7 +4,38 @@
     font-family: 'Rubik', sans-serif;
 }
 
-div{
+img{
     background-color: #ffffff;
 }
 
+.container-card-flavor{
+    background-color: #ffffff;
+}
+
+.card-flavor{
+    border-radius: 80px 80px 20px 20px;
+    height: 200px;
+    margin: 20px;
+    text-align: center;
+    -webkit-box-shadow: 7px 7px 7px 0px rgba(50, 50, 50, 0.59);
+    -moz-box-shadow:    7px 7px 7px 0px rgba(50, 50, 50, 0.59);
+    box-shadow:         7px 7px 7px 0px rgba(50, 50, 50, 0.59);
+}
+
+img {
+    max-width:100%;
+    max-height:100%;
+    height: auto;
+    border-radius: 80px 80px 20px 20px;
+}
+
+.size{
+    background-color: #ffffff;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 7px 7px 7px 0px rgba(50, 50, 50, 0.59);
+    -moz-box-shadow:    7px 7px 7px 0px rgba(50, 50, 50, 0.59);
+    box-shadow:         7px 7px 7px 0px rgba(50, 50, 50, 0.59);
+}
