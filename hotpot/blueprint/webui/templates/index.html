@@ -2,72 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Pot</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    {% assets "main_css" %}
-        <link rel="stylesheet" href="{{ ASSET_URL }}"> 
-    {% endassets %}
 </head>
 <body>
-    
-    <div class="container center-align"> <h5>Escolha o(s) sabor(es)</h5></div>
 
-    <div class="container row container-card-flavor">
-        {% for i in range(3) %}
-            {% include 'includes/card_flavor.html' %}
-        {% endfor %}
-    </div>
-
-
-    <div class="container red center-align"> <h5>Escolha o tamanho</h5></div>
-
-    <div class="container row center-align">
-        <div class="col s4">
-            <h4 style="color:red" class="size">P</h4>
-            <h6 style="color:red">R$ 89</h6>
-            <p>Serve até 2 pessoas</p>
-        </div>
-        <div class="col s4">
-            <h4 style="color:red" class="size">M</h4>
-            <h6 style="color:red">R$ 149</h6>
-            <p>Serve até 4 pessoas</p>
-        </div>
-        <div class="col s4">
-            <h4 style="color:red" class="size">G</h4>
-            <h6 style="color:red">R$ 199</h6>
-            <p>Serve até 6 pessoas</p>
-        </div>
-    </div>
-
-
-    {% include 'includes/item_list.html' %}
-
-    {% include 'includes/item_list.html' %}
-
-    <div class="container">
-        Alguma observação?
-        <label>
-            <input>
-        </label>
-    </div>
-
-    <div class="container center-align">
-        <p>Taxa de entrega para toda Goiânia: R$ 15</p>
-        <a class="waves-effect waves-light btn-large red">Concluir pedido e ir para WhatsApp</a>
-    </div>
-
-    <script
-        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous">
-    </script>
-    {% assets "main_js" %}
-        <script src="{{ ASSET_URL }}"></script>
-    {% endassets %}
 </body>
 </html>

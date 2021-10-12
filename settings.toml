@@ -1,6 +1,7 @@
 [default]
 TITLE = "Hot Pot"
 EXTENSIONS = [
-    # "hotpot.ext.database",
-    "hotpot.blueprint.webui"
+    "hotpot.ext.database",
+    "hotpot.blueprint.webui",
+    "hotpot.ext.create_db"
 ]
