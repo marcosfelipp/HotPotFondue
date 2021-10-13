@@ -4,3 +4,5 @@ Flask-SQLAlchemy
 SQLAlchemy-serializer
 flask_assets
 python-dotenv
+psycopg2-binary
+flask_migrate
