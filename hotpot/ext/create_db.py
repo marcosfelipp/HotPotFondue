@@ -7,14 +7,13 @@ def init_app(app):
         db.drop_all()
         db.create_all()
         flavor1 = Flavor(name='chocolate')
-        flavor2 = Flavor(name='carne')
-        flavor3 = Flavor(name='queijo')
+        flavor2 = Flavor(name='queijo_carne')
 
-        db.session.add_all([flavor1, flavor2, flavor3])
+        db.session.add_all([flavor1, flavor2])
         db.session.commit()
 
         item1 = Item(name='Brocolis', type='', price=0, amount=10)
-        item1.flavor_id = Flavor.query.filter_by(name='queijo').first().id
+        item1.flavor_id = Flavor.query.filter_by(name='queijo_carne').first().id
 
         item2 = Item(name='Marshmellow', type='', price=0, amount=10)
         item2.flavor_id = Flavor.query.filter_by(name='chocolate').first().id

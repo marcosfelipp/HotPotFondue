@@ -7,3 +7,7 @@ EXTENSIONS = [
     "hotpot.blueprint.webui",
     "hotpot.ext.create_db"
 ]
+
+[development]
+SQLALCHEMY_DATABASE_URI = 'sqlite:///hotpot.db'
+SECRET_KEY = '55551cc547d71ce68cb6631a'

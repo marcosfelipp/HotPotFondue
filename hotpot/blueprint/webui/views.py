@@ -1,4 +1,5 @@
 from flask import abort, render_template
+from hotpot.models import Flavor
 
 
 def index():
@@ -6,4 +7,6 @@ def index():
 
 
 def order_page():
-    return render_template("order.html")
+    flavors = Flavor.query
+    flavors_count = flavors.count()
+    return render_template("order.html", flavors=flavors, flavors_count=flavors_count)

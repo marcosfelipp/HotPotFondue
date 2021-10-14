@@ -20,9 +20,15 @@
     <div class="container center-align"> <h5>Escolha o(s) sabor(es)</h5></div>
 
     <div class="container row container-card-flavor">
-        {% for i in range(3) %}
+        {% for flavor in flavors %}
+            {% set flavor_name = flavor.name %}
             {% include 'includes/card_flavor.html' %}
         {% endfor %}
+
+        {% if flavors_count == 2 %}
+            {% set flavor_name = 'queijo_carne_chocolate' %}
+            {% include 'includes/card_flavor.html' %}
+        {% endif %}
     </div>
 
 
@@ -60,7 +66,10 @@
 
     <div class="container center-align">
         <p>Taxa de entrega para toda Goiânia: R$ 15</p>
-        <a class="waves-effect waves-light btn-large red">Concluir pedido e ir para WhatsApp</a>
+
+        <button class="btn waves-effect waves-light red" type="submit" name="action" >Concluir pedido e ir para WhatsApp
+        </button>
+
     </div>
 
     <script
