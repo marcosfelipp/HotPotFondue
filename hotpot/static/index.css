@@ -17,9 +17,6 @@ img{
     height: 200px;
     margin: 20px;
     text-align: center;
-    -webkit-box-shadow: 7px 7px 7px 0px rgba(50, 50, 50, 0.59);
-    -moz-box-shadow:    7px 7px 7px 0px rgba(50, 50, 50, 0.59);
-    box-shadow:         7px 7px 7px 0px rgba(50, 50, 50, 0.59);
 }
 
 img {
@@ -35,6 +32,17 @@ img {
     height: 70px;
     border-radius: 10px;
 
+    -webkit-box-shadow: 7px 7px 7px 0px rgba(50, 50, 50, 0.59);
+    -moz-box-shadow:    7px 7px 7px 0px rgba(50, 50, 50, 0.59);
+    box-shadow:         7px 7px 7px 0px rgba(50, 50, 50, 0.59);
+}
+
+.flavor-selected{
+    background-color: #ffffff;
+    border-radius: 80px 80px 20px 20px;
+    height: 200px;
+    margin: 20px;
+    text-align: center;
     -webkit-box-shadow: 7px 7px 7px 0px rgba(50, 50, 50, 0.59);
     -moz-box-shadow:    7px 7px 7px 0px rgba(50, 50, 50, 0.59);
     box-shadow:         7px 7px 7px 0px rgba(50, 50, 50, 0.59);

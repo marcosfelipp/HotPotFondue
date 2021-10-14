@@ -22,11 +22,13 @@
     <div class="container row container-card-flavor">
         {% for flavor in flavors %}
             {% set flavor_name = flavor.name %}
+            {% set flavor_id = flavor.id %}
             {% include 'includes/card_flavor.html' %}
         {% endfor %}
 
         {% if flavors_count == 2 %}
             {% set flavor_name = 'queijo_carne_chocolate' %}
+            {% set flavor_id = 3 %}
             {% include 'includes/card_flavor.html' %}
         {% endif %}
     </div>
