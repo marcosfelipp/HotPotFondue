@@ -20,7 +20,10 @@ jobs:
     steps:
       - name: Git clone our repository
         uses: actions/checkout@v2
-
+      
+      - name: Organize directory
+        run: mkdir database
+      
       - name: Create ZIP deployment package
         run: zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x '*.git*'
       
