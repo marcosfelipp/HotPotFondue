@@ -34,6 +34,32 @@ jobs:
       - name: Copy our deployment package to S3 bucket
         run: aws s3 cp ${{ env.DEPLOY_PACKAGE_NAME }} s3://${{ env.EB_PACKAGE_S3_BUCKET_NAME }}/
         
-      - name: Print completion of pipeline
+      - name: Print completion of CI pipeline
         run: echo "CI Pipeline finished successfully"
+          
+  my_cd_pipeline:
+    runs-on: ubuntu-latest
+    needs: [my_ci_pipeline]
+  
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with: 
+          aws-access-key-id: ${{ secrets.MY_AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.MY_AWS_SECRET_KEY }}
+          aws-region: ${{ env.AWS_REGION_NAME }}
+      
+      - name: Create new elasticbeanstack Application version
+        run: aws elasticbeanstalk create-application-version \
+          --application-name ${{ env.EB_APPLICATION_NAME }} \
+          --source-bundle S3Bucket="${{ env.EB_PACKAGE_S3_BUCKET_NAME }}",S3Key="${{ env.DEPLOY_PACKAGE_NAME }} \
+          --version-label "ver-${{ github.sha }}" \
+          --description "CommitSHA-${{ github.sha }}"
+          
+      - name: Deploy our new Application version
+        run: aws elasticbeanstalk update-environment --environment-name ${{ env.EB_ENVIRONMENT_NAME}} \
+            --version-label "ver-${{ github.sha }}" 
+            
+      - name: Print completion of CD pipeline
+        run: echo "CD Pipeline finished successfully"
           
